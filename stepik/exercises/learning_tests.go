@@ -44,11 +44,14 @@ func vote(x int, y int, z int) int {
 	}
 }
 
+/**
+Поменять местами переменные на которые ссылаются указатели.
+*/
 func test(x1 *int, x2 *int) {
-	x := *x1
-	fmt.Print(x)
-	x2 = &x
-	//x1 = x2
-	//
-	//fmt.Print(x1, x2)
+	var x int
+	x = *x2
+	*x2 = *x1
+	*x1 = x
+
+	fmt.Print(*x1, *x2)
 }
