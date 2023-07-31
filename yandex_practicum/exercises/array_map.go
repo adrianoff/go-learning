@@ -25,7 +25,7 @@ func RemoveDuplicates(input []string) []string {
 		m[v]++
 	}
 
-	//fmt.Println(m)
+	fmt.Println(m)
 
 	return res
 }
