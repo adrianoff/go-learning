@@ -1,11 +1,19 @@
 package mathslices
 
 func SumSlice(s []int) int {
-	return 0
+
+	sum := 0
+	for _, v := range s {
+		sum = sum+v
+	}
+
+	return sum
 }
 
 func MapSlice(s []int, op func(int) int) {
-	return
+	for i, v := range s {
+		s[i] = op(v)
+	}
 }
 
 func FoldSlice(s []int, op func(int, int) int, init int) int {
